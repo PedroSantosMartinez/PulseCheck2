@@ -1,0 +1,66 @@
+/* Existing styles */
+h1 {
+    display: inline-block;
+    padding: 10px;
+    background-color: aliceblue;
+    border: 2px solid black;
+}
+
+.Photos-Row {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+
+.frame {
+    border: 10px solid white;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.frame img {
+    transition: transform 0.3s ease; /* Smooth transition for zoom */
+}
+
+.frame:hover img {
+    transform: scale(1.1); /* Slight zoom in on hover */
+}
+
+.frame.fullscreen img {
+    transform: scale(1.5); /* Zoom level when clicked */
+}
+
+/* Fullscreen zoom effect */
+.fullscreen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 90vw;
+    height: auto;
+    max-height: 90vh;
+    border: 10px solid white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+/* Overlay for the fullscreen effect */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
