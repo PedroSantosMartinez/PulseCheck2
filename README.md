@@ -1,8 +1,11 @@
-# PulseCheck2
+# PulseCheck3
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
 PhotoStorage is a product designed to keep your photos all in one place, with the usage of animation to make the storages part feel engage and interest for users.
+
+## Reason
+As a user, I want to share images with friends and family, like images I enjoy, and hide images I don't want to see in the future, so that I can have a personalized and enjoyable experience with the content that matters to me.
 
 ## Usage
 

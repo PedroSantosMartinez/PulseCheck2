@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.querySelectorAll('.frame').forEach(f => f.classList.remove('fullscreen'));
                 frame.classList.add('fullscreen');
                 overlay.style.display = 'block';
+                overlay.style.opacity = 1; // Ensure the overlay is fully visable
             }
         });
     });
@@ -22,6 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Hide fullscreen on clicking the overlay
     overlay.addEventListener('click', function() {
         document.querySelectorAll('.frame').forEach(frame => frame.classList.remove('fullscreen'));
-        overlay.style.display = 'none';
+        overlay.style.opacity = 0; // Fade out effect
+        setTimeout(() => {
+            overlay.style.display = 'none';
+        }, 300); // Match this duration with the transition in the CSS
     });
 });

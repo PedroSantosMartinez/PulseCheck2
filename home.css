@@ -10,11 +10,14 @@ h1 {
     display: flex;
     justify-content: center;
     align-content: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
 .frame {
+    display: inline-block;
     border: 10px solid white;
+    border-bottom: 50px solid white;
     padding: 10px;
     background-color: white;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
@@ -27,6 +30,7 @@ h1 {
 
 .frame img {
     transition: transform 0.3s ease; /* Smooth transition for zoom */
+    border: 1px solid black;
 }
 
 .frame:hover img {
@@ -42,16 +46,19 @@ h1 {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-    width: 90vw;
+    transform: translate(-50%, -50%) scale(1.5); /*Zoom Effect*/
+    z-index: 1001;
+    width: auto;
     height: auto;
     max-height: 90vh;
+    max-width: 90vh;
     border: 10px solid white;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
     background-color: white;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /*Smooth transition */
+    cursor: zoom-out;
 }
+
 
 /* Overlay for the fullscreen effect */
 .overlay {
@@ -60,7 +67,9 @@ h1 {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    z-index: 1000;
     display: none;
+    cursor: zoom-out;
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
 }
