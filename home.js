@@ -29,3 +29,28 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 300); // Match this duration with the transition in the CSS
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Like button functionality
+    document.querySelectorAll('.like-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            alert('You liked this picture!');
+        });
+    });
+
+    // Dislike button functionality
+    document.querySelectorAll('.dislike-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            alert('You disliked this picture!');
+        });
+    });
+
+    // Hide button functionality
+    document.querySelectorAll('.hide-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const frame = this.closest('.frame');
+            frame.style.display = 'none';
+        });
+    });
+});
+

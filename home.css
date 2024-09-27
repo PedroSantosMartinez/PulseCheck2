@@ -28,10 +28,37 @@ h1 {
     cursor: pointer;
 }
 
+
 .frame img {
     transition: transform 0.3s ease; /* Smooth transition for zoom */
     border: 1px solid black;
+    margin-bottom: 10px;
 }
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 0;
+    border-top: 5px solid white; /* Matching border size */
+    background-color: #f9f9f9;  /* Slight background to distinguish */
+    box-sizing: border-box; /* Ensure proper sizing */
+    width: 100%;
+}
+
+.controls button {
+    padding: 5px 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #e0e0e0;
+}
+
 
 .frame:hover img {
     transform: scale(1.1); /* Slight zoom in on hover */
