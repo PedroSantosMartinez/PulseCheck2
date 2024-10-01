@@ -5,11 +5,30 @@
     <title>Document</title>
     <link href="home.css" rel="stylesheet">
     <title>PhotoStorage</title>
+    <script src="home.js"></script>
 </head>
 <body>
-    
-    <div class="overlay" id="overlay"></div>
-    <h1>PhotoStorage</h1>
+
+    <!-- This is for the dropdown menu-->
+<div class="topnav" id="myTopnav">
+    <a href="#main" class="active">PhotoStorage</a>
+    <a href="#face">Facebook</a>
+    <a href="#twitter">Twitter</a>
+    <a href="#insta">Instagram</a>
+    <div class="dropdown">
+        <button class="dropbtn">Feedback
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="comment_form.html?type=general">General Feedback</a>
+            <a href="comment_form.html?type=enhancement">App Enhancement</a>
+            <a href="comment_form.html?type=comment">General Comment</a>
+        </div>
+    </div>
+    <a href="#">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
     
     <div class="Photos-Row">
         
@@ -125,6 +144,15 @@
     </div>   
 
 
-    <script src="home.js"></script>
+    
+
+    <footer class="social-media-footer"></footer>
+        <!-- Temporary links for social media -->
+        <a href="#" class="social-link">Facebook</a>
+        <a href="#" class="social-link">Twitter</a>
+        <a href="#" class="social-link">Instagram</a>
+      
+    </footer>
+
 </body>
 </html>
