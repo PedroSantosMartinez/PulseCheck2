@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link href="styles.css" rel="stylesheet"> <!-- Link to your CSS file -->
+</head>
+
+<body>
+
+    <h2>Feedback Form</h2>
+
+    <!-- This is the start of the form-->
+     <!-- "action state where to send the form data"-->
+
+    <form action="submit_feedback.php" method="post"> <!-- Replace with your server-side handler -->
+        <label for="feedback-type">Feedback Type:</label><br>
+        <select id="feedback-type" name="feedback-type" required>
+            <option value="general">General Feedback</option>
+            <option value="enhancement">App Enhancement</option>
+            <option value="comment">General Comment</option>
+        </select><br><br>
+        
+        <!-- Input for user's name -->
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <!-- Input for user's email-->
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <!-- Input for user's comments -->
+        <label for="comments">Comments:</label><br>
+        <textarea id="comments" name="comments" rows="4" required></textarea><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        // Get the query parameter from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const feedbackType = urlParams.get('type');
+        
+        // Set the selected option in the dropdown if a type is provided
+        if (feedbackType) {
+            document.getElementById('feedback-type').value = feedbackType;
+        }
+    </script>
+
+</body>
+</html>
