@@ -3,8 +3,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="home.css" rel="stylesheet">
+    <link href="RequestBtn.css" rel="stylesheet">
     <title>PhotoStorage</title>
-    <script src="home.js"></script>
+    
 </head>
 <body>
 
@@ -25,8 +26,25 @@
         </div>
     </div>
     <a href="#">About</a>
-    <a href="javascript:void(0);" class="icon" id="menuIcon"//onclick="myFunction()"//>&#9776;</a>
+    <a href="javascript:void(0);" class="icon" id="menuIcon" onclick="myFunction()">&#9776;</a>
     <button id="openFormBtn">Request a Feature</button>
+
+    <!-- Modal for the feature request form -->
+    <div id="featureRequestModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Feature Request</h2>
+            <form id="featureRequestForm">
+                <label for="featureTitle">Feature Title:</label>
+                <input type="text" id="featureTitle" name="featureTitle" required>
+
+                <label for="featureDescription">Feature Description:</label>
+                <textarea id="featureDescription" name="featureDescription" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
 
 </div>
 
@@ -155,6 +173,9 @@
         <a href="#" class="social-link">Instagram</a>
       
     </footer>
+    
+    <script src="home.js"></script>
+    <script src="RequestBtn.js"></script>
 
 </body>
 </html>
